@@ -67,10 +67,24 @@ public:
 private:
     //存放数据的队列
     queue<int> nums;
-};
+}
 
 /**
  * Your NestedIterator object will be instantiated and called as such:
  * NestedIterator i(nestedList);
  * while (i.hasNext()) cout << i.next();
+ */
+/**
+ 总结：vector的遍历方式
+	1、C语言写法 for (int i = 0; i < nestedList.size();i++)
+	2、for循环迭代器for(vector<int>::cons_itreator iter = nestedList.cbegin();iter != nestedList.cend;iter++)
+	3、for循环迭代器变种for(auto iter = nestedList.cbegin();iter != nestedList.cend;iter++ )
+	4、for_each+函数 for_each(nestedList.cbegin(),nestedList.cend();printer<int>)
+		template<typename T>
+		void printer(const T& val)
+		{
+			cout << val << endl;
+		}
+	5、for_each+lambda for_each(nestedList.cbegin(), nestedList.cend(), [](const int& val)->void{cout << val << endl; });
+	6、for 区间遍历 for(auto lsit:nestedList){ cout << val << endl;}
  */
