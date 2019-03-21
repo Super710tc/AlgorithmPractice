@@ -39,7 +39,7 @@ public:
     NestedIterator(vector<NestedInteger> &nestedList) {
         iteration(nestedList);
     }
-    //µİ¹éµ÷ÓÃº¯Êı£¬Éú³É³õÊ¼»¯¶ÓÁĞ
+    //é€’å½’è°ƒç”¨å‡½æ•°ï¼Œç”Ÿæˆåˆå§‹åŒ–é˜Ÿåˆ—
     void iteration(vector<NestedInteger> &nestedList)
     {
          for(auto list:nestedList)
@@ -65,7 +65,7 @@ public:
       return !(nums.empty());
     }
 private:
-    //´æ·ÅÊı¾İµÄ¶ÓÁĞ
+    //å­˜æ”¾æ•°æ®çš„é˜Ÿåˆ—
     queue<int> nums;
 }
 
@@ -75,16 +75,16 @@ private:
  * while (i.hasNext()) cout << i.next();
  */
 /**
- ×Ü½á£ºvectorµÄ±éÀú·½Ê½
-	1¡¢CÓïÑÔĞ´·¨ for (int i = 0; i < nestedList.size();i++)
-	2¡¢forÑ­»·µü´úÆ÷for(vector<int>::cons_itreator iter = nestedList.cbegin();iter != nestedList.cend;iter++)
-	3¡¢forÑ­»·µü´úÆ÷±äÖÖfor(auto iter = nestedList.cbegin();iter != nestedList.cend;iter++ )
-	4¡¢for_each+º¯Êı for_each(nestedList.cbegin(),nestedList.cend();printer<int>)
+ æ€»ç»“ï¼švectorçš„éå†æ–¹å¼
+	1ã€Cè¯­è¨€å†™æ³• for (int i = 0; i < nestedList.size();i++)
+	2ã€forå¾ªç¯è¿­ä»£å™¨for(vector<int>::cons_itreator iter = nestedList.cbegin();iter != nestedList.cend();iter++)
+	3ã€forå¾ªç¯è¿­ä»£å™¨å˜ç§for(auto iter = nestedList.cbegin();iter != nestedList.cend();iter++ )
+	4ã€for_each+å‡½æ•° for_each(nestedList.cbegin(),nestedList.cend();printer<int>)
 		template<typename T>
 		void printer(const T& val)
 		{
 			cout << val << endl;
 		}
-	5¡¢for_each+lambda for_each(nestedList.cbegin(), nestedList.cend(), [](const int& val)->void{cout << val << endl; });
-	6¡¢for Çø¼ä±éÀú for(auto lsit:nestedList){ cout << val << endl;}
+	5ã€for_each+lambda for_each(nestedList.cbegin(), nestedList.cend(), [](const int& val)->void{cout << val << endl; });
+	6ã€for åŒºé—´éå† for(auto lsit:nestedList){ cout << val << endl;}
  */
