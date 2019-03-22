@@ -15,7 +15,7 @@ public:
         max=localMax(height);
         reverse(height.begin(),height.end());
         temp=localMax(height);
-        return max>temp?max:temp; 
+        return max(max,temp); 
     }
     int localMax(vector<int>& height){
         int total = height.size();
