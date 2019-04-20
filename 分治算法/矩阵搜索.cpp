@@ -30,10 +30,10 @@ public:
                 return true;
             }
             if(matrix[i][j] < target) {
-                ++ i;
+                 i++;
             }
             else {
-                -- j;
+                 j--;
             }
         }
         return false;
